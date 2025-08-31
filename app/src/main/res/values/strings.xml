@@ -1,0 +1,37 @@
+<resources>
+    <string name="actionbar">K\'s Portfolio</string>
+    <string name="app_name">K\'s Portfolio</string>
+    <string name="welcome">Welcome!\nTo My Portfolio.</string>
+    <string name="About_btn">ABOUT ME</string>
+    <string name="Skills_btn">SKILLS</string>
+    <string name="Projects_btn">PROJECTS</string>
+    <string name="Contact_btn">CONTACT</string>
+    <string name="Dev">Developed By Kavya Chaturvedi</string>
+    <string name="about">
+            Hi, I’m Kavy Chaturvedi 👋\n
+            \n
+            🎓 3rd-year B.Tech CSE student\n
+            💻 Interested in Android Development &amp; Cybersecurity\n
+            🔒 Network Security | Ethical Hacking | Penetration Testing\n
+            ☕ Strengthening Java &amp; DSA\n
+            \n
+            🚀 Open to internships, projects &amp; collaborations!
+    </string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="about_me">About Me</string>
+    <string name="exit">Exit</string>
+    <string name="see_more_on">See More on\n</string>
+    <string name="instagram">Instagram</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="github">GitHub</string>
+    <string name="twitter">Twitter</string>
+    <string name="email">Email</string>
+    <string name="mails">ss3207428@gmail.com \n2k23.cscys2311172@gmail.com</string>
+    <string name="number">+91-7355968041</string>
+    <string name="phone">Phone</string>
+    <string name="address_desc">Address</string>
+    <string name="address_text">Address</string>
+    <string name="v_21_yashoda_nagar_near_namak_factory_chauraha_kanpur_nagar_uttar_pradesh">V-21, Yashoda Nagar, Near Namak Factory Chauraha, Kanpur nagar, Uttar Pradesh</string>
+
+
+</resources>
