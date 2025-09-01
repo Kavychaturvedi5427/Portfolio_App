@@ -4,81 +4,163 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <!-- Exit button pinned at top-right, but below ActionBar -->
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/exit_anim"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_margin="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        app:lottie_rawRes="@raw/exit"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        android:rotation="180"
-        android:contentDescription="@string/exit"
-        app:lottie_colorFilter="@color/grey"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
+        android:layout_width="390dp"
+        android:layout_height="700dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp">
 
-    <LinearLayout
-        android:id="@+id/content_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/avtar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/profile_avatar"
-            android:layout_margin="10dp" />
-
-        <TextView
-            android:id="@+id/welcome"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome"
-            android:fontFamily="@font/bebas_neue_regular"
-            android:gravity="center"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp" />
+            android:layout_height="match_parent">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/sliderAnimation"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:layout_margin="10dp"
-            app:lottie_rawRes="@raw/slider"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            android:rotation="270"
-            app:lottie_colorFilter="@color/grey" />
+            <!-- Exit animation at top-right -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/exit_anim"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                app:lottie_rawRes="@raw/exit"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                android:rotation="180"/>
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/loadingAnimation"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:visibility="gone"
-            android:layout_gravity="center"
-            app:lottie_autoPlay="false"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/loading"
-            app:lottie_colorFilter="@color/black" />
+            <!-- Welcome text at top-left -->
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="100dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/front"
+                android:textSize="50sp" />
 
-    </LinearLayout>
+            <!-- Subtitle text -->
+            <TextView
+                android:id="@+id/welcome_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="234dp"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="Welcome to my Portfolio"
+                android:textSize="25sp" />
 
-    <!-- Footer at bottom-right -->
-    <TextView
-        android:id="@+id/dev_txt"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="12dp"
-        android:fontFamily="@font/bebas_neue_regular"
-        android:text="@string/Dev"
-        android:textSize="18sp" />
+            <!-- Developer text at bottom-right -->
 
+            <!-- Profile photo -->
+
+            <TextView
+                android:id="@+id/dev_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="184dp"
+                android:layout_marginBottom="13dp"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/Dev"
+                android:textSize="18sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avtar"
+                android:layout_width="190dp"
+                android:layout_height="210dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="280dp"
+                android:contentDescription="Profile photo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/self_main"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <!-- Slider animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/sliderAnimation"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="105dp"
+                android:rotation="-90"
+                app:lottie_rawRes="@raw/slider"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+
+            <!-- Loading animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loadingAnimation"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                app:lottie_rawRes="@raw/loading"
+                app:lottie_loop="true"
+                android:visibility="gone" />
+
+            <!-- Top-left diagonal stripes -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="12dp">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="6dp"
+                    android:background="#90EE90"
+                    android:rotation="-45"/>
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="6dp"
+                    android:background="#90EE90"
+                    android:rotation="-45"
+                    android:layout_marginTop="18dp"/>
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="6dp"
+                    android:background="#90EE90"
+                    android:rotation="-45"
+                    android:layout_marginTop="36dp"/>
+            </RelativeLayout>
+
+            <!-- Bottom-right diagonal stripes -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:padding="12dp">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="6dp"
+                    android:background="#90EE90"
+                    android:rotation="145"/>
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="6dp"
+                    android:background="#90EE90"
+                    android:rotation="145"
+                    android:layout_marginTop="18dp"/>
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="6dp"
+                    android:background="#90EE90"
+                    android:rotation="145"
+                    android:layout_marginTop="36dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
 </RelativeLayout>

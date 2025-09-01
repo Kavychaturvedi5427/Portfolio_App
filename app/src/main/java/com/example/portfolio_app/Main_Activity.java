@@ -43,7 +43,7 @@ public class Main_Activity extends AppCompatActivity {
                         startActivity(section_Intent);
                         finish(); // optional if you don’t want to come back
                     }
-                }, 500); // 2 second delay, adjust as needed
+                }, 1000); // 2 second delay, adjust as needed
             }
         });
 
