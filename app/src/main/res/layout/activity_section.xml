@@ -9,74 +9,82 @@
     android:gravity="center"
     tools:context=".Section_activity">
 
-    <LinearLayout
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="20dp">
+        android:layout_height="500dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/about_btn"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:fontFamily="@font/bebas_neue_regular"
-            android:text="@string/About_btn"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:layout_margin="8dp"/>
+        <LinearLayout
+            android:layout_width="333dp"
+            android:layout_height="543dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/skills_btn"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:fontFamily="@font/bebas_neue_regular"
-            android:text="@string/Skills_btn"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:layout_margin="8dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/about_btn"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/About_btn"
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/projects_btn"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:fontFamily="@font/bebas_neue_regular"
-            android:text="@string/Projects_btn"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:layout_margin="8dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/skills_btn"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/Skills_btn"
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/contact_btn"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:fontFamily="@font/bebas_neue_regular"
-            android:text="@string/Contact_btn"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:layout_margin="8dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/projects_btn"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/Projects_btn"
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/contact_btn"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/bebas_neue_regular"
+                android:text="@string/Contact_btn"
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/sliderAnimation"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_margin="10dp"
-        app:lottie_rawRes="@raw/slider"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        android:rotation="90"
-        app:lottie_colorFilter="@color/grey"/>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/sliderAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="10dp"
+                android:rotation="90"
+                app:lottie_autoPlay="true"
+                app:lottie_colorFilter="@color/grey"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/slider" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/loadingAnimation"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_margin="10dp"
-        app:lottie_rawRes="@raw/loading"
-        android:visibility="gone"
-        app:lottie_autoPlay="false"
-        app:lottie_loop="true"
-        app:lottie_colorFilter="@color/grey"/>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loadingAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                app:lottie_autoPlay="false"
+                app:lottie_colorFilter="@color/grey"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loading" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
