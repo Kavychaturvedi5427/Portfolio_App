@@ -1,90 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
     tools:context=".Section_activity">
 
-
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
-        android:layout_height="500dp"
+        android:layout_width="395dp"
+        android:layout_height="723dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="6dp">
 
-        <LinearLayout
-            android:layout_width="333dp"
-            android:layout_height="543dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="20dp">
+        <RelativeLayout
+            android:layout_width="390dp"
+            android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/about_btn"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:layout_margin="8dp"
-                android:fontFamily="@font/bebas_neue_regular"
-                android:text="@string/About_btn"
-                android:textSize="23sp"
-                android:textStyle="bold" />
+            <!-- About Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/about_card"
+                android:layout_width="155dp"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/skills_btn"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:layout_margin="8dp"
-                android:fontFamily="@font/bebas_neue_regular"
-                android:text="@string/Skills_btn"
-                android:textSize="23sp"
-                android:textStyle="bold" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/projects_btn"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:layout_margin="8dp"
-                android:fontFamily="@font/bebas_neue_regular"
-                android:text="@string/Projects_btn"
-                android:textSize="23sp"
-                android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/about_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/bebas_neue_regular"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:text="About"
+                        android:textSize="26sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/contact_btn"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
-                android:layout_margin="8dp"
-                android:fontFamily="@font/bebas_neue_regular"
-                android:text="@string/Contact_btn"
-                android:textSize="23sp"
-                android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/about_Text"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="Learn more about me"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Project Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project_card"
+                android:layout_width="155dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/about_card"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/about_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/project_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/bebas_neue_regular"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:text="Projects"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/project_txt"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/projects_txt"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Skills Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/skills_card"
+                android:layout_width="155dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/project_card"
+                android:layout_marginStart="25dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/skills_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center"
+                        android:text="Skills"
+                        android:textSize="26sp"
+                        android:fontFamily="@font/bebas_neue_regular"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/skills_txt"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="Things I’m good at"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Contact Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/contact_card"
+                android:layout_width="155dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/skills_card"
+                android:layout_marginLeft="13dp"
+                android:layout_toEndOf="@id/skills_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/contact_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center"
+                        android:text="Contacts"
+                        android:textSize="26sp"
+                        android:fontFamily="@font/bebas_neue_regular"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contact_txt"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="Reach out to me"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/sliderAnimation"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom|center"
-                android:layout_margin="10dp"
+                android:layout_width="44dp"
+                android:layout_height="43dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="42dp"
                 android:rotation="90"
                 app:lottie_autoPlay="true"
-                app:lottie_colorFilter="@color/grey"
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/slider" />
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/loadingAnimation"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
                 android:layout_margin="10dp"
                 android:visibility="gone"
                 app:lottie_autoPlay="false"
                 app:lottie_colorFilter="@color/grey"
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/loading" />
-        </LinearLayout>
+
+        </RelativeLayout>
+
     </com.google.android.material.card.MaterialCardView>
-</LinearLayout>
+</RelativeLayout>

@@ -38,7 +38,8 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/bebas_neue_regular"
                 android:text="@string/front"
-                android:textSize="50sp" />
+                android:textSize="50sp"
+                android:textColor="#545454"/>
 
             <!-- Subtitle text -->
             <TextView
@@ -46,10 +47,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="234dp"
+                android:layout_marginTop="240dp"
                 android:fontFamily="@font/bebas_neue_regular"
                 android:text="Welcome to my Portfolio"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:textColor="#7C7474"/>
 
             <!-- Developer text at bottom-right -->
 
@@ -61,16 +63,17 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="184dp"
-                android:layout_marginBottom="13dp"
+                android:layout_marginEnd="262dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/bebas_neue_regular"
                 android:text="@string/Dev"
-                android:textSize="18sp" />
+                android:textSize="15sp"
+                />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/avtar"
-                android:layout_width="190dp"
-                android:layout_height="210dp"
+                android:layout_width="174dp"
+                android:layout_height="182dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="280dp"
                 android:contentDescription="Profile photo"
@@ -85,7 +88,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="105dp"
+                android:layout_marginBottom="150dp"
                 android:rotation="-90"
                 app:lottie_rawRes="@raw/slider"
                 app:lottie_autoPlay="true"
@@ -98,7 +101,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="70dp"
                 app:lottie_rawRes="@raw/loading"
                 app:lottie_loop="true"
                 android:visibility="gone" />
@@ -127,9 +130,9 @@
                 <View
                     android:layout_width="100dp"
                     android:layout_height="6dp"
+                    android:layout_marginTop="36dp"
                     android:background="#90EE90"
-                    android:rotation="-45"
-                    android:layout_marginTop="36dp"/>
+                    android:rotation="-45" />
             </RelativeLayout>
 
             <!-- Bottom-right diagonal stripes -->

@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -33,10 +34,10 @@ public class Section_activity extends AppCompatActivity {
         LottieAnimationView back_slider=findViewById(R.id.sliderAnimation);
         LottieAnimationView loading_anim=findViewById(R.id.loadingAnimation);
 
-        Button about=findViewById(R.id.about_btn);
-        Button skills=findViewById(R.id.skills_btn);
-        Button projects=findViewById(R.id.projects_btn);
-        Button contact=findViewById(R.id.contact_btn);
+        CardView about=findViewById(R.id.about_card);
+        CardView skills=findViewById(R.id.skills_card);
+        CardView projects=findViewById(R.id.project_card);
+        CardView contact=findViewById(R.id.contact_card);
 
         // OnClick activity for back button ....
         back_slider.setOnClickListener(new View.OnClickListener() {

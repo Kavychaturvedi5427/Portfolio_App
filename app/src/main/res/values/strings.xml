@@ -6,7 +6,7 @@
     <string name="Skills_btn">SKILLS</string>
     <string name="Projects_btn">PROJECTS</string>
     <string name="Contact_btn">CONTACT</string>
-    <string name="Dev">Developed By Kavya Chaturvedi</string>
+    <string name="Dev">Developed By @Kavya</string>
     <string name="about">
             Hi, I’m Kavy Chaturvedi 👋\n
             \n
@@ -33,7 +33,7 @@
     <string name="address_text">Address</string>
     <string name="v_21_yashoda_nagar_near_namak_factory_chauraha_kanpur_nagar_uttar_pradesh">V-21, Yashoda Nagar, Near Namak Factory Chauraha, Kanpur nagar, Uttar Pradesh</string>
     <string name="front">Hey There,\nI\'m Kavya</string>
-
+    <string name="projects_txt">What I’ve built</string>
 
 
 </resources>
