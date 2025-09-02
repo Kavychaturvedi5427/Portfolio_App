@@ -34,6 +34,23 @@
     <string name="v_21_yashoda_nagar_near_namak_factory_chauraha_kanpur_nagar_uttar_pradesh">V-21, Yashoda Nagar, Near Namak Factory Chauraha, Kanpur nagar, Uttar Pradesh</string>
     <string name="front">Hey There,\nI\'m Kavya</string>
     <string name="projects_txt">What I’ve built</string>
+    <string name="reach_out_to_me">Reach out to me</string>
+    <string name="contacts">Contacts</string>
+    <string name="things_i_m_good_at">Things I’m good at</string>
+    <string name="skills">Skills</string>
+    <string name="projects">Projects</string>
+    <string name="learn_more_about_me">Learn more about me</string>
+    <string name="Proj1">F.R.U.I.T.S – Face Recognition Unified \tInterface Technology</string>
+    <string name="proj1_desc">FRUITS, a group based project which allows secure login or sign-up using your face, just like ‘Sign in with Google’. Captures basic info and authenticates users seamlessly across websites.</string>
+    <string name="Proj2">Tomato Leaf AI </string>
+    <string name="proj2_desc">TomatoLeafAI is a deep learning classifier that detects diseases in tomato leaves using a custom CNN. It identifies Early Blight, Late Blight, or Healthy leaves and is part of Project Kisan, helping farmers with crop disease detection.</string>
+    <string name="proj3">Portfolio APP</string>
+    <string name="proj3_desc">A sleek Android app to showcase my projects, skills, and contact information, built with Java and Material Design for a clean, interactive user experience.</string>
+    <string name="GIT">Visit On GitHub :-</string>
+    <string name="github_portfolio">GITHUB_Portfolio</string>
+    <string name="tomatoleaf_git">tomatoLeaf_GIT</string>
+    <string name="visit_on_github">Visit On GitHub :-</string>
+    <string name="fruits_git">FRUITS_git</string>
 
 
 </resources>

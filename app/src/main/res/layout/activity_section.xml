@@ -9,23 +9,25 @@
     tools:context=".Section_activity">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
         android:layout_width="395dp"
-        android:layout_height="723dp"
+        android:layout_height="720dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="6dp">
+        app:cardElevation="6dp"
+        >
 
         <RelativeLayout
-            android:layout_width="390dp"
-            android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="9dp"
+            >
 
             <!-- About Card -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/about_card"
                 android:layout_width="155dp"
                 android:layout_height="150dp"
-                android:layout_alignParentStart="true"
                 android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="25dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -59,12 +61,24 @@
                         android:layout_below="@id/about_Text"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
-                        android:text="Learn more about me"
+                        android:text="@string/learn_more_about_me"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- About Animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/aboutUsAnimation"
+                android:layout_width="147dp"
+                android:layout_height="133dp"
+                android:layout_alignTop="@id/about_card"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/about_card"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/about_us" />
 
             <!-- Project Card -->
             <com.google.android.material.card.MaterialCardView
@@ -72,9 +86,8 @@
                 android:layout_width="155dp"
                 android:layout_height="150dp"
                 android:layout_below="@id/about_card"
-                android:layout_marginLeft="13dp"
-                android:layout_marginTop="2dp"
-                android:layout_toRightOf="@id/about_card"
+                android:layout_marginStart="13dp"
+                android:layout_toEndOf="@id/about_card"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -98,7 +111,7 @@
                         android:shadowDx="2"
                         android:shadowDy="2"
                         android:shadowRadius="4"
-                        android:text="Projects"
+                        android:text="@string/projects"
                         android:textSize="26sp" />
 
                     <TextView
@@ -113,7 +126,21 @@
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Project Animation -->
+
             <!-- Skills Card -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/projectAnimation"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/about_card"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="22dp"
+                android:layout_toStartOf="@id/project_card"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/project" />
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/skills_card"
                 android:layout_width="155dp"
@@ -138,7 +165,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="35dp"
                         android:gravity="center"
-                        android:text="Skills"
+                        android:text="@string/skills"
                         android:textSize="26sp"
                         android:fontFamily="@font/bebas_neue_regular"
                         android:shadowColor="@color/black"
@@ -152,19 +179,33 @@
                         android:layout_below="@id/skills_txt"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
-                        android:text="Things I’m good at"
+                        android:text="@string/things_i_m_good_at"
                         android:textSize="15sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <!-- Contact Card -->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/skillanim"
+                android:layout_width="146dp"
+                android:layout_height="124dp"
+                android:layout_above="@id/contact_card"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toEndOf="@id/skills_card"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/skills" />
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/contact_card"
                 android:layout_width="155dp"
                 android:layout_height="150dp"
                 android:layout_below="@id/skills_card"
-                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
                 android:layout_toEndOf="@id/skills_card"
                 android:clickable="true"
                 android:focusable="true"
@@ -184,7 +225,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="35dp"
                         android:gravity="center"
-                        android:text="Contacts"
+                        android:text="@string/contacts"
                         android:textSize="26sp"
                         android:fontFamily="@font/bebas_neue_regular"
                         android:shadowColor="@color/black"
@@ -198,23 +239,39 @@
                         android:layout_below="@id/contact_txt"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
-                        android:text="Reach out to me"
+                        android:text="@string/reach_out_to_me"
                         android:textSize="15sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- Contact Animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/contactAnimation"
+                android:layout_width="141dp"
+                android:layout_height="124dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginBottom="95dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/contact"/>
+
+            <!-- Slider Animation -->
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/sliderAnimation"
-                android:layout_width="44dp"
-                android:layout_height="43dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerInParent="true"
-                android:layout_marginBottom="42dp"
+                android:layout_marginBottom="38dp"
                 android:rotation="90"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/slider" />
 
+            <!-- Loading Animation -->
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/loadingAnimation"
                 android:layout_width="48dp"
@@ -229,6 +286,5 @@
                 app:lottie_rawRes="@raw/loading" />
 
         </RelativeLayout>
-
     </com.google.android.material.card.MaterialCardView>
 </RelativeLayout>
