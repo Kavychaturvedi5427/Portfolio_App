@@ -1,266 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/mainCard"
+    <RelativeLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="9dp"
-        >
+        android:paddingBottom="20dp">
 
-<!--    First Project-->
-        <RelativeLayout
-            android:id="@+id/FirstRL"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mainCard"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="9dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/project1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="9dp">
+            <!-- Container for all projects -->
+            <RelativeLayout
+                android:id="@+id/FirstRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <RelativeLayout
-                    android:id="@+id/Proj1RL"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                <!-- First Project -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/project1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="9dp">
+
+                    <RelativeLayout
+                        android:id="@+id/Proj1RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/Fruits"
+                            android:layout_width="61dp"
+                            android:layout_height="67dp"
+                            android:layout_margin="3dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/projfruits" />
+
+                        <TextView
+                            android:id="@+id/proj1_title"
+                            android:layout_width="237dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="3dp"
+                            android:layout_toEndOf="@id/Fruits"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:text="@string/Proj1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/proj1_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/proj1_title"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/proj1_desc" />
+
+                        <TextView
+                            android:id="@+id/Link1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/proj1_title"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toEndOf="@id/Fruits"
+                            android:text="@string/GIT" />
+
+                        <ImageView
+                            android:id="@+id/gitLink1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@id/proj1_title"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toEndOf="@id/Link1"
+                            android:contentDescription="@string/fruits_git"
+                            android:src="@drawable/github" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Second Project -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/project2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/project1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="9dp">
+
+                    <RelativeLayout
+                        android:id="@+id/Proj2RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/TomatoLeafAI"
+                            android:layout_width="69dp"
+                            android:layout_height="62dp"
+                            android:layout_margin="3dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/tomatoleaf" />
+
+                        <TextView
+                            android:id="@+id/proj2_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_toEndOf="@id/TomatoLeafAI"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:text="@string/Proj2"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/proj2desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/TomatoLeafAI"
+                            android:layout_margin="10dp"
+                            android:text="@string/proj2_desc" />
+
+                        <TextView
+                            android:id="@+id/Link2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/proj2_title"
+                            android:layout_margin="3dp"
+                            android:layout_toEndOf="@id/TomatoLeafAI"
+                            android:text="@string/visit_on_github" />
+
+                        <ImageView
+                            android:id="@+id/gitLink2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@id/proj2_title"
+                            android:layout_marginTop="3dp"
+                            android:layout_toEndOf="@id/Link2"
+                            android:contentDescription="@string/tomatoleaf_git"
+                            android:src="@drawable/github" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Third Project -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/project3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/project2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="9dp">
+
+                    <RelativeLayout
+                        android:id="@+id/Proj3RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/portfolio"
+                            android:layout_width="69dp"
+                            android:layout_height="62dp"
+                            android:layout_margin="3dp"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/portfolio" />
+
+                        <TextView
+                            android:id="@+id/proj3_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_toEndOf="@id/portfolio"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:text="@string/proj3"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/portfolio"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/proj3_desc" />
+
+                        <TextView
+                            android:id="@+id/Link3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/proj3_title"
+                            android:layout_margin="3dp"
+                            android:layout_toEndOf="@id/portfolio"
+                            android:text="@string/GIT" />
+
+                        <ImageView
+                            android:id="@+id/gitLink3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@id/proj3_title"
+                            android:layout_marginTop="3dp"
+                            android:layout_toEndOf="@id/Link3"
+                            android:contentDescription="@string/github_portfolio"
+                            android:src="@drawable/github" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Slider + Loader inside FrameLayout -->
+                <FrameLayout
+                    android:id="@+id/sliderContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/project3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="100dp">
 
                     <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/Fruits"
-                        android:layout_width="61dp"
-                        android:layout_height="67dp"
-                        android:layout_marginStart="3dp"
-                        android:layout_marginLeft="3dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginEnd="3dp"
-                        android:layout_marginRight="3dp"
-                        android:layout_marginBottom="3dp"
+                        android:id="@+id/sliderAnimation"
+                        android:layout_width="32dp"
+                        android:layout_height="36dp"
+                        android:rotation="90"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/projfruits" />
-
-                    <TextView
-                        android:id="@+id/proj1_title"
-                        android:layout_width="237dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="7dp"
-                        android:layout_marginLeft="3dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginEnd="3dp"
-                        android:layout_marginRight="3dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_toEndOf="@id/Fruits"
-                        android:fontFamily="@font/bebas_neue_regular"
-                        android:text="@string/Proj1"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/proj1_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/proj1_title"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="10dp"
-                        android:text="@string/proj1_desc" />
-
-                    <TextView
-                        android:id="@+id/Link1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/proj1_title"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_toEndOf="@id/Fruits"
-                        android:text="@string/GIT" />
-
-                    <ImageView
-                        android:id="@+id/gitLink1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_below="@id/proj1_title"
-                        android:layout_marginStart="3dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_toEndOf="@id/Link1"
-                        android:contentDescription="@string/fruits_git"
-                        android:src="@drawable/github" />
-                </RelativeLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-<!--    Second Project  -->
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/project2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/project1"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="9dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
-
-                <RelativeLayout
-                    android:id="@+id/Proj2RL"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp">
+                        app:lottie_rawRes="@raw/slider" />
 
                     <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/TomatoLeafAI"
-                        android:layout_width="69dp"
-                        android:layout_height="62dp"
-                        android:layout_margin="3dp"
-                        app:lottie_autoPlay="true"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/tomatoleaf" />
-
-                    <TextView
-                        android:id="@+id/proj2_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_toEndOf="@id/TomatoLeafAI"
-                        android:fontFamily="@font/bebas_neue_regular"
-                        android:text="@string/Proj2"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/proj2desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/TomatoLeafAI"
-                        android:layout_margin="10dp"
-                        android:text="@string/proj2_desc" />
-
-                    <TextView
-                        android:id="@+id/Link2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/proj2_title"
-                        android:layout_margin="3dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_toEndOf="@id/TomatoLeafAI"
-                        android:text="@string/visit_on_github" />
-
-                    <ImageView
-                        android:id="@+id/gitLink2"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_below="@id/proj2_title"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginEnd="19dp"
-                        android:layout_toEndOf="@id/Link2"
-                        android:contentDescription="@string/tomatoleaf_git"
-                        android:src="@drawable/github" />
-                </RelativeLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/project3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/project2"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="9dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
-
-                <RelativeLayout
-                    android:id="@+id/Proj3RL"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp">
-
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/portfolio"
-                        android:layout_width="69dp"
-                        android:layout_height="62dp"
-                        android:layout_margin="3dp"
-                        app:lottie_rawRes="@raw/portfolio"
-                        app:lottie_autoPlay="true"
-                        app:lottie_loop="true"
-                        />
-
-                    <TextView
-                        android:id="@+id/proj3_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="3dp"
-                        android:layout_toEndOf="@id/portfolio"
-                        android:fontFamily="@font/bebas_neue_regular"
-                        android:text="@string/proj3"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/portfolio"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/proj3_desc" />
-                    <TextView
-                        android:id="@+id/Link3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/proj3_title"
-                        android:layout_margin="3dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_toEndOf="@id/portfolio"
-                        android:text="@string/GIT" />
-
-                    <ImageView
-                        android:id="@+id/gitLink3"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_below="@id/proj3_title"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginEnd="19dp"
-                        android:layout_toEndOf="@id/Link3"
-                        android:contentDescription="@string/github_portfolio"
-                        android:src="@drawable/github" />
-                </RelativeLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/sliderAnimation"
-                android:layout_width="32dp"
-                android:layout_height="36dp"
-                android:layout_below="@id/project3"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="13dp"
-                android:layout_marginBottom="100dp"
-                android:rotation="90"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/slider" />
-
-        </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
-</RelativeLayout>
+                        android:id="@+id/loading"
+                        android:layout_width="32dp"
+                        android:layout_height="36dp"
+                        android:visibility="gone"
+                        app:lottie_rawRes="@raw/loading"
+                        app:lottie_loop="true" />
+                </FrameLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</ScrollView>
