@@ -62,6 +62,6 @@ public class Skills_activity extends AppCompatActivity {
             });
         });
 
-        getSupportActionBar().setTitle("K's Portfolio");
+        getSupportActionBar().setTitle("Skills");
     }
 }

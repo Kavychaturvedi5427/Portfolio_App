@@ -68,7 +68,7 @@ public class Projects_activity extends AppCompatActivity {
 
         // Set action bar title
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("K's Portfolio");
+            getSupportActionBar().setTitle("Projects");
         }
     }
 }

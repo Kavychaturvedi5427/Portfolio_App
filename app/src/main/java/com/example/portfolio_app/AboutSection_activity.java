@@ -43,7 +43,7 @@ public class AboutSection_activity extends AppCompatActivity {
                 },500);
             }
         });
-        getSupportActionBar().setTitle("K's Portfolio");
+        getSupportActionBar().setTitle("About");
 
     }
 }

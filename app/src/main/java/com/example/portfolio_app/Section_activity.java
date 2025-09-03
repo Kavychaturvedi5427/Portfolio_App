@@ -103,6 +103,6 @@ public class Section_activity extends AppCompatActivity {
         });
 
 
-        getSupportActionBar().setTitle("K's Portfolio");
+        getSupportActionBar().setTitle("Content");
     }
 }

@@ -111,6 +111,6 @@ public class Contact_activity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setTitle("K's Portfolio");
+        getSupportActionBar().setTitle("Contact Info");
     }
 }
