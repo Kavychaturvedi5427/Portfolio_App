@@ -101,7 +101,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="70dp"
+                android:layout_marginBottom="150dp"
                 app:lottie_rawRes="@raw/loading"
                 app:lottie_loop="true"
                 android:visibility="gone" />
