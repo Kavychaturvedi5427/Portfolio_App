@@ -21,7 +21,7 @@ An Android portfolio app showcasing projects, skills, and personal information. 
 ![Projects Screen](screenshots/projects.png)  
 ![Skills Screen](screenshots/skills.png)   -->
 
-*Replace these screenshots with your own app images.*
+
 
 ---
 
