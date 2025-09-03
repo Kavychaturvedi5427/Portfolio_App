@@ -23,10 +23,10 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/project1"
-                android:layout_width="319dp"
-                android:layout_height="182dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
+                android:layout_margin="20dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -109,11 +109,11 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/project2"
-                android:layout_width="325dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/project1"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="9dp"
                 android:clickable="true"
@@ -178,11 +178,11 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/project3"
-                android:layout_width="328dp"
-                android:layout_height="178dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/project2"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
+                android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="9dp"
                 android:clickable="true"

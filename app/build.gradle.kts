@@ -1,5 +1,6 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -25,6 +26,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -32,15 +34,20 @@ android {
 }
 
 dependencies {
+    // Existing dependencies
     implementation("com.airbnb.android:lottie:6.6.7")
-    implementation("com.google.android.material:material:1.12.0")   // this is used to make change the shape of the views
-    implementation("com.google.android.material:material:1.12.0")   // this is for card view and other views
+    implementation("com.google.android.material:material:1.12.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.filament.android)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+
+    // Firebase BoM (manages versions)
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+
+    // Example Firebase services (add what you need)
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
 }

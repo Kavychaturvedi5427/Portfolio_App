@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+
 import com.airbnb.lottie.LottieAnimationView;
 
 public class Main_Activity extends AppCompatActivity {
@@ -21,7 +22,6 @@ public class Main_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);  // this is to make sure that by default app opens in light mode
         setContentView(R.layout.activity_main);
-
 
         // sliding anim to move to next activity....
         LottieAnimationView slider_Anim= findViewById(R.id.sliderAnimation);
