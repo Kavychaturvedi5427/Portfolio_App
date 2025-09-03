@@ -1,10 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Skills_activity">
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Skills_activity">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mainCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="80dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="9dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Technical Skills Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/technicalskillscard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="9dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/technicalSkills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:text="@string/technical_skills"
+                            android:textSize="25sp"
+                            android:layout_marginBottom="15dp"/>
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnCount="3"
+                            android:alignmentMode="alignMargins"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/javaAnim"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/jv" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/c" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/android" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/htm" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/sql" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/css" />
+
+                        </GridLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Soft Skills Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/softskillscard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="9dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/softskills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:text="Soft Skills"
+                            android:textSize="25sp"
+                            android:layout_marginBottom="15dp"/>
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnCount="3"
+                            android:alignmentMode="alignMargins"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/team" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/problemsolving" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/timemanage" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="12dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="false"
+                                app:lottie_rawRes="@raw/critical" />
+
+                        </GridLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Tools and Technologies Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="9dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/tT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:text="Tools And Technologies"
+                            android:textSize="25sp"
+                            android:layout_marginBottom="15dp"/>
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnCount="3"
+                            android:alignmentMode="alignMargins"
+                            android:gravity="center">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:layout_margin="12dp"
+                                android:contentDescription="@string/github"
+                                android:src="@drawable/github" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:layout_margin="12dp"
+                                android:contentDescription="Android Studio"
+                                android:src="@drawable/android_studio" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:layout_margin="12dp"
+                                android:contentDescription="Visual Studio"
+                                android:src="@drawable/vs" />
+
+                        </GridLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Slider outside card -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/slider"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:rotation="90"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/slider" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/loading" />
+
+    </RelativeLayout>
+</ScrollView>
