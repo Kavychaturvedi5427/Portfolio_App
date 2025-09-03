@@ -89,6 +89,7 @@ public class Section_activity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                back_slider.setVisibility(View.GONE);
                 loading_anim.setVisibility(View.VISIBLE);
                 loading_anim.playAnimation();
                 v.postDelayed(new Runnable() {

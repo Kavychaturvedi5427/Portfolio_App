@@ -32,6 +32,7 @@ public class Main_Activity extends AppCompatActivity {
         slider_Anim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                slider_Anim.setVisibility(View.GONE);
                 // Show and start loading animation
                 loading_anim.setVisibility(View.VISIBLE);
                 loading_anim.playAnimation();

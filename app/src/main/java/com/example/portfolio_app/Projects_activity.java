@@ -60,6 +60,7 @@ public class Projects_activity extends AppCompatActivity {
        sliderAnimation.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               sliderAnimation.setVisibility(View.GONE);
                Intent intent = new Intent(Projects_activity.this, Section_activity.class);
                startActivity(intent);
            }
