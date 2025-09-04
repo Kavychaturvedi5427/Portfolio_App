@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -108,6 +109,44 @@ public class Contact_activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent back_toSection=new Intent(Contact_activity.this,Section_activity.class);
                 startActivity(back_toSection);
+            }
+        });
+
+        // Openning calling app functionality....
+
+        LinearLayout calling= findViewById(R.id.phone);
+        calling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent call_App=new Intent(Intent.ACTION_DIAL);
+                call_App.setData(Uri.parse("tel:"+"+917355968041"));
+                startActivity(call_App);
+            }
+        });
+
+        //  mail functionality....
+        LinearLayout email=findViewById(R.id.email);
+        email.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String[] mails={"ss3207428@gmail.com","2k23.cscys2311172@gmail.com"};
+                Intent send_mail=new Intent(Intent.ACTION_SENDTO);
+                send_mail.setData(Uri.parse("mailto:"));
+                send_mail.putExtra(Intent.EXTRA_EMAIL,mails);
+                startActivity(send_mail);
+            }
+        });
+
+        // Map functionality...
+        LinearLayout map=findViewById(R.id.map);
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String address="V-21 Yashoda Nagar, Near Namak Factory Chauraha, Kanpur, Uttar Pradesh";
+                Uri mapuri=Uri.parse("geo:0,0?q="+Uri.encode(address));
+                Intent map_intent=new Intent(Intent.ACTION_VIEW,mapuri);
+                map_intent.setPackage("com.google.android.apps.maps");
+                startActivity(map_intent);
             }
         });
 
