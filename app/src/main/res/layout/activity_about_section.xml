@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,68 +9,85 @@
     tools:context=".AboutSection_activity">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
         android:layout_width="match_parent"
-        android:layout_height="640dp"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="6dp">
+        android:layout_height="match_parent"
+        android:layout_margin="40dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="9dp"
+        >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="16dp">
+            android:layout_height="match_parent"
+            >
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/about_photo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="10dp"
+                android:id="@+id/About_photo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/self"
-                app:shapeAppearanceOverlay="@style/CircleImageView"
-                android:contentDescription="Profile photo" />
+                app:shapeAppearance="@style/CircleImageView"
+                app:strokeColor="@android:color/white"
+                app:strokeWidth="2dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:elevation="8dp"
+                android:translationZ="4dp"
+                />
 
-            <TextView
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/sliderAnimation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:lottie_rawRes="@raw/slider"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:rotation="90"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_marginBottom="20dp"
+            />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_Card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/about_me"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp"/>
+                android:layout_below="@id/About_photo"
+                android:layout_margin="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="9dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bebas_neue_regular"
-                android:text="@string/about"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/aboutTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/bebas_neue_regular"
+                    android:text="@string/about"
+                    android:textSize="30sp" />
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/sliderAnimation"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
-                app:lottie_rawRes="@raw/slider"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                android:rotation="90"
-                app:lottie_colorFilter="@color/grey"/>
+
+            </androidx.cardview.widget.CardView>
+
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/loadingAnimation"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 app:lottie_rawRes="@raw/loading"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
                 app:lottie_autoPlay="false"
-                app:lottie_loop="true"
                 android:visibility="gone"
-                app:lottie_colorFilter="@color/grey"/>
-        </LinearLayout>
+                android:layout_margin="30dp"
+                />
 
+        </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
-</LinearLayout>
+
+</RelativeLayout>

@@ -3,6 +3,10 @@ package com.example.portfolio_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +30,16 @@ public class AboutSection_activity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+
+        ImageView selfImg= findViewById(R.id.About_photo);
+        Animation trans = AnimationUtils.loadAnimation(this,R.anim.slide_anim);
+
+        TextView aboutTitle = findViewById(R.id.aboutTitle);
+        Animation bounceAnim = AnimationUtils.loadAnimation(this, R.anim.bounce_anim);
+        aboutTitle.startAnimation(bounceAnim);
+
 
         LottieAnimationView back_slider=findViewById(R.id.sliderAnimation);
         LottieAnimationView loading_anim=findViewById(R.id.loadingAnimation);
