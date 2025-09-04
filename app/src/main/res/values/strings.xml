@@ -51,6 +51,8 @@
     <string name="visit_on_github">Visit On GitHub :-</string>
     <string name="fruits_git">FRUITS_git</string>
     <string name="technical_skills">Technical Skills</string>
+    <string name="type_your_message_here">Type your message here...</string>
+    <string name="copyright">© 2025 Kavya Chaturvedi. All rights reserved.</string>
 
 
 </resources>

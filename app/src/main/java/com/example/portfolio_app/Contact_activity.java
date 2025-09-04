@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.firebase.Firebase;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Contact_activity extends AppCompatActivity {
 
@@ -150,6 +157,38 @@ public class Contact_activity extends AppCompatActivity {
             }
         });
 
+        LottieAnimationView exit =findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finishAffinity();    // to kill all the activities in the stack...
+                System.exit(0);
+            }
+        });
+
+        // Implementing messaging fuctionality using firebase and firebase database....
+
+        FirebaseFirestore db=FirebaseFirestore.getInstance();
+        ImageView send_btn= findViewById(R.id.sendBtn);
+        TextView messagebox = findViewById(R.id.messageBox);
+        send_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String Entered_msg = messagebox.getText().toString().trim();
+                if(!Entered_msg.isEmpty()){
+                    Map<String , Object> msg=new HashMap<>();
+                    msg.put("message",Entered_msg);
+                    db.collection("messages").add(msg)
+                            .addOnSuccessListener(documentReference -> {
+                                Toast.makeText(Contact_activity.this, "Message Sent!", Toast.LENGTH_SHORT).show();
+                            })
+                            .addOnFailureListener(e -> {
+                                Toast.makeText(Contact_activity.this, "Message Not Sent!", Toast.LENGTH_SHORT).show();
+                            });
+                    messagebox.setText("");     // once the message is sent it will be cleared...
+                }
+            }
+        });
         getSupportActionBar().setTitle("Contact Info");
     }
 }
