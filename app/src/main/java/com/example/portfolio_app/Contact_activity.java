@@ -44,6 +44,7 @@ public class Contact_activity extends AppCompatActivity {
 
 
         LottieAnimationView slider=findViewById(R.id.slider);
+        LottieAnimationView loading=findViewById(R.id.loadingAnimation);
 
         // adding insta url....
         insta.setOnClickListener(new View.OnClickListener() {
@@ -111,11 +112,20 @@ public class Contact_activity extends AppCompatActivity {
 
         // slider back to section....
         slider.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
+                slider.setVisibility(View.GONE);
+                loading.setVisibility(View.VISIBLE);
+                loading.playAnimation();
                 Intent back_toSection=new Intent(Contact_activity.this,Section_activity.class);
-                startActivity(back_toSection);
+
+                v.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(back_toSection);
+                    }
+                },500);
+
             }
         });
 

@@ -1,7 +1,7 @@
 <resources>
     <string name="actionbar">K\'s Portfolio</string>
     <string name="app_name">K\'s Portfolio</string>
-    <string name="welcome">Welcome!\nTo My Portfolio.</string>
+    <string name="welcome">\t\t\t\tWelcome!\nTo My Portfolio.</string>
     <string name="About_btn">ABOUT ME</string>
     <string name="Skills_btn">SKILLS</string>
     <string name="Projects_btn">PROJECTS</string>
@@ -31,7 +31,7 @@
     <string name="address_desc">Address</string>
     <string name="address_text">Address</string>
     <string name="v_21_yashoda_nagar_near_namak_factory_chauraha_kanpur_nagar_uttar_pradesh">V-21, Yashoda Nagar, Near Namak Factory Chauraha, Kanpur nagar, Uttar Pradesh</string>
-    <string name="front">Hey There,\nI\'m Kavya</string>
+    <string name="front">Hey ,\nI\'m Kavya</string>
     <string name="projects_txt">What I’ve built</string>
     <string name="reach_out_to_me">Reach out to me</string>
     <string name="contacts">Contacts</string>
@@ -53,6 +53,7 @@
     <string name="technical_skills">Technical Skills</string>
     <string name="type_your_message_here">Type your message here...</string>
     <string name="copyright">© 2025 Kavya Chaturvedi. All rights reserved.</string>
+
 
 
 </resources>

@@ -264,7 +264,7 @@
                 android:layout_width="33dp"
                 android:layout_height="33dp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="38dp"
                 android:rotation="90"
                 app:lottie_autoPlay="true"
@@ -277,11 +277,10 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
-                android:layout_margin="38dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="38dp"
                 android:visibility="gone"
                 app:lottie_autoPlay="false"
-                app:lottie_colorFilter="@color/grey"
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/loading" />
 
