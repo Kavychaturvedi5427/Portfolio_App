@@ -37,6 +37,7 @@ dependencies {
     // Existing dependencies
     implementation("com.airbnb.android:lottie:6.6.7")
     implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
