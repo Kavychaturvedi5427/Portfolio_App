@@ -1,93 +1,239 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".AboutSection_activity">
+    tools:context=".AboutSection_activity"
+    android:fitsSystemWindows="true"
+    >
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/mainCard"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="40dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="9dp"
+        android:layout_height="wrap_content"
         >
 
-        <RelativeLayout
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/About_photo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/self"
+            app:shapeAppearance="@style/CircleImageView"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:elevation="8dp"
+            android:translationZ="4dp"
+            />
+
+        <ImageView
+            android:id="@+id/aboutme"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:src="@drawable/about"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/About_photo"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/about_Card"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="20dp"
+            app:cardElevation="20dp"
+            android:layout_below="@id/aboutme"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
             >
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/About_photo"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/self"
-                app:shapeAppearance="@style/CircleImageView"
-                app:strokeColor="@android:color/white"
-                app:strokeWidth="2dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:elevation="8dp"
-                android:translationZ="4dp"
-                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:text="3rd-year B.Tech Computer Science student."
+                        android:textSize="16sp"
+                        android:paddingVertical="6dp"
+                        app:drawableStartCompat="@drawable/bullet_dot" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:text="Currently learning Android app development and Cybersecurity."
+                        android:textSize="16sp"
+                        android:paddingVertical="6dp"
+                        app:drawableStartCompat="@drawable/bullet_dot" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:text="Interested in network security, ethical hacking, and penetration testing."
+                        android:textSize="16sp"
+                        android:paddingVertical="6dp"
+                        app:drawableStartCompat="@drawable/bullet_dot" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:text="Strengthening foundation in Java and Data Structures &amp; Algorithms (DSA)."
+                        android:textSize="16sp"
+                        android:paddingVertical="6dp"
+                        app:drawableStartCompat="@drawable/bullet_dot" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ImageView
+            android:id="@+id/goals"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/about_Card"
+            android:src="@drawable/goal"/>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/goalscard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="20dp"
+            app:cardElevation="20dp"
+            android:layout_below="@id/goals"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="Showcase my projects, skills, and creativity."
+                    android:textSize="16sp"
+                    android:paddingVertical="6dp"
+                    app:drawableStartCompat="@drawable/bullet_dot" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="Provide a central place to learn about my work."
+                    android:textSize="16sp"
+                    android:paddingVertical="6dp"
+                    app:drawableStartCompat="@drawable/bullet_dot" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="Make it easy for recruiters or collaborators to contact me."
+                    android:textSize="16sp"
+                    android:paddingVertical="6dp"
+                    app:drawableStartCompat="@drawable/bullet_dot" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="Keep improving the app as I learn new tech."
+                    android:textSize="16sp"
+                    android:paddingVertical="6dp"
+                    app:drawableStartCompat="@drawable/bullet_dot" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/dev"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/goalscard"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/developer"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Dev_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="20dp"
+            app:cardElevation="20dp"
+            android:layout_below="@id/dev"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:text="A dedicated app developer &amp; cybersecurity enthusiast."
+                android:textSize="16sp"
+                android:paddingVertical="6dp"
+                app:drawableStartCompat="@drawable/bullet_dot" />
+        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/sliderAnimation"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             app:lottie_rawRes="@raw/slider"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@id/Dev_Card"
             android:rotation="90"
+            android:layout_marginBottom="10dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            android:layout_marginBottom="20dp"
             />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/details_Card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/About_photo"
-                android:layout_margin="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="9dp">
-
-                <TextView
-                    android:id="@+id/aboutTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:fontFamily="@font/bebas_neue_regular"
-                    android:text="@string/about"
-                    android:textSize="30sp" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadingAnimation"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:lottie_rawRes="@raw/loading"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Dev_Card"
+            android:rotation="90"
+            android:visibility="gone"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"/>
 
 
-            </androidx.cardview.widget.CardView>
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/loadingAnimation"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:lottie_rawRes="@raw/loading"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                app:lottie_autoPlay="false"
-                android:visibility="gone"
-                android:layout_margin="30dp"
-                />
-
-        </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

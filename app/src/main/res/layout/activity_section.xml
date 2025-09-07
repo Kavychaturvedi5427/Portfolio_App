@@ -9,6 +9,7 @@
     tools:context=".Section_activity">
 
     <com.google.android.material.card.MaterialCardView
+
         android:id="@+id/mainCard"
         android:layout_width="395dp"
         android:layout_height="720dp"
