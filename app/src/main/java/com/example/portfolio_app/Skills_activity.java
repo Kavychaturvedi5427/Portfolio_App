@@ -30,16 +30,6 @@ public class Skills_activity extends AppCompatActivity {
             return insets;
         });
 
-        // Java animation (your existing one)
-        LottieAnimationView javaanim = findViewById(R.id.javaAnim);
-        javaanim.playAnimation();
-        javaanim.addAnimatorListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                javaanim.setProgress(1f);
-            }
-        });
-
         // Slider button + Loader
         LottieAnimationView slider = findViewById(R.id.slider);
         LottieAnimationView loading = findViewById(R.id.loading);
