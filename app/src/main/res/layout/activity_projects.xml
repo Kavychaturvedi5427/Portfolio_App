@@ -234,34 +234,32 @@
                     </RelativeLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Slider + Loader inside FrameLayout -->
-                <FrameLayout
-                    android:id="@+id/sliderContainer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/project3"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="13dp"
-                    android:layout_marginBottom="100dp">
-
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/sliderAnimation"
-                        android:layout_width="32dp"
-                        android:layout_height="36dp"
-                        android:rotation="90"
-                        app:lottie_autoPlay="true"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/slider" />
-
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/loading"
-                        android:layout_width="32dp"
-                        android:layout_height="36dp"
-                        android:visibility="gone"
-                        app:lottie_rawRes="@raw/loading"
-                        app:lottie_loop="true" />
-                </FrameLayout>
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/sliderAnimation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:rotation="90"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/slider"
+            android:layout_below="@id/mainCard"
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:lottie_rawRes="@raw/loading"
+            android:layout_below="@id/mainCard"
+            android:layout_centerHorizontal="true"
+            app:lottie_loop="false"
+            app:lottie_autoPlay="false"
+            />
+
     </RelativeLayout>
 </ScrollView>

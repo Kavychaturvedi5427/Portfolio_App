@@ -251,12 +251,12 @@
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/slider"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_margin="10dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:rotation="90"
                     app:lottie_autoPlay="true"
                     app:lottie_colorFilter="@color/grey"
+                    android:layout_gravity="center"
                     app:lottie_loop="true"
                     app:lottie_rawRes="@raw/slider" />
 
@@ -264,11 +264,10 @@
                     android:id="@+id/loadingAnimation"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:layout_marginBottom="38dp"
                     android:visibility="gone"
                     android:layout_gravity="center_horizontal|bottom"
                     app:lottie_autoPlay="false"
-                    app:lottie_loop="true"
+                    app:lottie_loop="false"
                     app:lottie_rawRes="@raw/loading" />
 
             </LinearLayout>
