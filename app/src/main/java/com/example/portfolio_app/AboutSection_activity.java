@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -35,18 +36,24 @@ public class AboutSection_activity extends AppCompatActivity {
 
         ImageView selfImg= findViewById(R.id.About_photo);
         Animation trans = AnimationUtils.loadAnimation(this,R.anim.slide_anim);
+        Animation slide=AnimationUtils.loadAnimation(this,R.anim.bounce_anim);
 
-        TextView aboutTitle = findViewById(R.id.aboutTitle);
-        Animation bounceAnim = AnimationUtils.loadAnimation(this, R.anim.bounce_anim);
-        aboutTitle.startAnimation(bounceAnim);
+        CardView AboutCard= findViewById(R.id.about_Card);
+        CardView goals= findViewById(R.id.goalscard);
+        CardView dev= findViewById(R.id.Dev_Card);
 
+        selfImg.startAnimation(trans);
+        AboutCard.startAnimation(slide);
+        goals.startAnimation(slide);
+        dev.startAnimation(slide);
 
         LottieAnimationView back_slider=findViewById(R.id.sliderAnimation);
         LottieAnimationView loading_anim=findViewById(R.id.loadingAnimation);
         back_slider.setOnClickListener(new View.OnClickListener() {
-            Intent backT0Section=new Intent(AboutSection_activity.this,Section_activity.class);
             @Override
             public void onClick(View v) {
+                Intent backT0Section=new Intent(AboutSection_activity.this,Section_activity.class);
+                back_slider.setVisibility(View.GONE);
                 loading_anim.setVisibility(View.VISIBLE);
                 loading_anim.playAnimation();
                 v.postDelayed(new Runnable() {
@@ -57,6 +64,7 @@ public class AboutSection_activity extends AppCompatActivity {
                 },500);
             }
         });
+
         getSupportActionBar().setTitle("About");
 
     }
