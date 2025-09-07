@@ -16,6 +16,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.airbnb.lottie.Lottie;
 import com.airbnb.lottie.LottieAnimationView;
 
 public class AboutSection_activity extends AppCompatActivity {
@@ -36,16 +37,21 @@ public class AboutSection_activity extends AppCompatActivity {
 
         ImageView selfImg= findViewById(R.id.About_photo);
         Animation trans = AnimationUtils.loadAnimation(this,R.anim.slide_anim);
-        Animation slide=AnimationUtils.loadAnimation(this,R.anim.bounce_anim);
+        Animation Bounce=AnimationUtils.loadAnimation(this,R.anim.bounce_anim);
+
+        LottieAnimationView ai=findViewById(R.id.ai);
+        LottieAnimationView random =findViewById(R.id.random);
 
         CardView AboutCard= findViewById(R.id.about_Card);
         CardView goals= findViewById(R.id.goalscard);
         CardView dev= findViewById(R.id.Dev_Card);
 
         selfImg.startAnimation(trans);
-        AboutCard.startAnimation(slide);
-        goals.startAnimation(slide);
-        dev.startAnimation(slide);
+        AboutCard.startAnimation(Bounce);
+        goals.startAnimation(Bounce);
+        dev.startAnimation(Bounce);
+        ai.startAnimation(Bounce);
+        random.startAnimation(Bounce);
 
         LottieAnimationView back_slider=findViewById(R.id.sliderAnimation);
         LottieAnimationView loading_anim=findViewById(R.id.loadingAnimation);
