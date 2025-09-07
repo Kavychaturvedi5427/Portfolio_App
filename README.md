@@ -1,41 +1,39 @@
-# Portfolio App
+# 📱 Portfolio App
 
-An Android portfolio app showcasing projects, skills, and personal information. Designed for developers and professionals to present their work in a simple and interactive way.
-
----
-
-## Features
-
-- **About Me**: View personal details and a brief introduction.  
-- **Projects**: Showcase your projects with descriptions, images, and links.  
-- **Skills**: Highlight your technical skills and proficiencies.  
-- **Contact**: Provide links to social media, email, and other ways to connect.  
-- **Dark/Light Mode**: Smooth transition between themes.  (Not implemented as of now, but will be implemented in future.)
-- **Interactive UI**: Clean and responsive design for mobile devices.
-
----
-<!-- 
-## Screenshots
-
-![Home Screen](screenshots/home.png)  
-![Projects Screen](screenshots/projects.png)  
-![Skills Screen](screenshots/skills.png)   -->
-
-
+An Android portfolio app showcasing **projects, skills, and personal information**.  
+Designed for developers and professionals to present their work in a **simple, elegant, and interactive way**.
 
 ---
 
-## Technologies Used
+## ✨ Features
+
+- **About Me** → View personal details and a short introduction  
+- **Projects** → Showcase your projects with descriptions, images, and links  
+- **Skills** → Highlight technical skills and proficiencies  
+- **Contact** → Provide links to social media, email, and other ways to connect  
+- **Dark/Light Mode** *(coming soon 🚀)*  
+- **Interactive UI** → Clean and responsive design for mobile devices  
+
+---
+
+## 🚀 Technologies Used
 
 - **Android Studio**  
 - **Java**  
-- **XML**  
-<!-- - **Firebase (Optional)** for backend and data storage   -->
-- **Material Design** for UI components  
+- **XML (UI Layouts)**  
+- **Material Design Components**  
 
 ---
 
-## Installation
+## 📦 Download
+
+👉 [Download the latest APK here](../../releases/latest)  
+
+*(Make sure to enable **“Install from Unknown Sources”** on your Android device before installing.)*
+
+---
+
+## 🛠️ Installation (Manual)
 
 1. Clone the repository:
    ```bash
