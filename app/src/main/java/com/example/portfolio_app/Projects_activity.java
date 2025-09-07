@@ -41,6 +41,7 @@ public class Projects_activity extends AppCompatActivity {
         ImageView Project3 = findViewById(R.id.gitLink3);
 
         LottieAnimationView sliderAnimation = findViewById(R.id.sliderAnimation);
+        LottieAnimationView loadingAnimation =findViewById(R.id.loading);
 
         Project1.setOnClickListener(v -> {
             String gitURL = "https://github.com/ankit-prabhavak/FaceRecognitionUnifiedInterfaceTechnoloy.git";
@@ -61,8 +62,16 @@ public class Projects_activity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                sliderAnimation.setVisibility(View.GONE);
+               loadingAnimation.setVisibility(View.VISIBLE);
+               loadingAnimation.playAnimation();
                Intent intent = new Intent(Projects_activity.this, Section_activity.class);
-               startActivity(intent);
+               v.postDelayed(new Runnable() {
+                   @Override
+                   public void run() {
+                       startActivity(intent);
+                   }
+               },500);
+
            }
        });
 
