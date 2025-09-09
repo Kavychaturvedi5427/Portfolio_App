@@ -11,12 +11,11 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
+        android:layout_height="wrap_content"
         >
 
-<!--        Hard Coded Value needed to be changed as they make the layout appear
-differently on different device screen size-->
+        <!--        Hard Coded Value needed to be changed as they make the layout appear
+        differently on different device screen size-->
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/tech_card"
@@ -36,147 +35,133 @@ differently on different device screen size-->
                 android:layout_height="match_parent"
                 android:padding="15dp">
 
-            <TextView
-                android:id="@+id/technical_skills"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Technical Skills"
-                android:fontFamily="@font/bebas_neue_regular"
-                android:textSize="30sp"
-                android:layout_centerHorizontal="true"
-                android:shadowColor="@color/grey"
-                android:shadowDx="2"
-                android:shadowDy="2"
-                android:shadowRadius="4"
-                />
-
-                <ImageView
-                    android:id="@+id/java"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/java"
-                    android:layout_below="@id/technical_skills"
-                    android:layout_margin="20dp"
-                    android:contentDescription="Java"
-                    />
-
                 <TextView
-                    android:id="@+id/java_txt"
+                    android:id="@+id/tech_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Java"
-                    android:layout_toEndOf="@id/java"
-                    android:layout_below="@id/technical_skills"
-                    android:layout_marginTop="25dp"
+                    android:text="Technical Skills"
+                    android:fontFamily="@font/bebas_neue_regular"
+                    android:textSize="30sp"
+                    android:layout_centerHorizontal="true"
+                    android:shadowColor="@color/grey"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"
                     />
 
-                <ImageView
-                    android:id="@+id/Clang"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/c"
-                    android:layout_toEndOf="@id/java_txt"
-                    android:layout_below="@id/technical_skills"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="15dp"
-                    />
-
-                <TextView
-                    android:id="@+id/c_txt"
-                    android:layout_width="wrap_content"
+                <GridLayout
+                    android:id="@+id/tech_grid"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="C"
-                    android:layout_below="@id/technical_skills"
-                    android:layout_toEndOf="@id/Clang"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginStart="15dp"
-                    />
+                    android:columnCount="4"
+                    android:layout_below="@id/tech_txt"
+                    android:layout_margin="10dp"
+                    >
 
-                <ImageView
-                    android:id="@+id/Android"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/android"
-                    android:layout_below="@id/technical_skills"
-                    android:layout_toEndOf="@id/c_txt"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="15dp"
-                    />
+                    <ImageView
+                        android:id="@+id/java"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/java"
+                        android:layout_margin="10dp"
+                        />
 
-                <TextView
-                    android:id="@+id/android_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Android\t\t\tDev"
-                    android:layout_toEndOf="@id/Android"
-                    android:layout_below="@id/technical_skills"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginStart="15dp"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:text="Java"
+                        android:layout_gravity="center"/>
 
-                <ImageView
-                    android:id="@+id/htm"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/java"
-                    android:src="@drawable/html5"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    />
+                    <ImageView
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/c"
+                        />
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="C"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_gravity="center"
+                        />
 
-                <TextView
-                    android:id="@+id/htm_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HTML\n\t\t5"
-                    android:layout_below="@id/java_txt"
-                    android:layout_toEndOf="@id/htm"
-                    android:layout_marginTop="45dp"
-                    android:layout_marginStart="10dp"
-                    />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/android"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:layout_margin="10dp"
+                        />
 
-                <ImageView
-                    android:id="@+id/css"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_below="@id/Clang"
-                    android:layout_toEndOf="@id/htm_txt"
-                    android:src="@drawable/css"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="20dp"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\t\tAndroid\nDevelopment"
+                        android:layout_row="1"
+                        android:layout_column="2"
+                        />
 
-                <TextView
-                    android:id="@+id/css_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="CSS\n\t3"
-                    android:layout_toEndOf="@id/css"
-                    android:layout_below="@id/c_txt"
-                    android:layout_marginTop="45dp"
-                    android:layout_marginStart="15dp"
-                    />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mysql"
+                        android:layout_row="0"
+                        android:layout_column="3"
+                        android:layout_margin="10dp"
+                        />
 
-                <ImageView
-                    android:id="@+id/mysql"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/mysql"
-                    android:layout_toEndOf="@id/css_txt"
-                    android:layout_below="@id/Android"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="15dp"
-                    />
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="MySQL"
+                        android:layout_column="3"
+                        android:layout_row="1"
+                        android:layout_gravity="center"
+                        />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/android_txt"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="29dp"
-                    android:layout_toEndOf="@id/mysql"
-                    android:text="MySQL"
-                    />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/html5"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_margin="10dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HTML-5"
+                        android:layout_row="3"
+                        android:layout_column="1"
+                        android:layout_gravity="center"
+                        />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/css"
+                        android:layout_row="2"
+                        android:layout_column="2"
+                        android:layout_margin="10dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CSS-3"
+                        android:layout_row="3"
+                        android:layout_column="2"
+                        android:layout_gravity="center"
+                        />
+
+
+                </GridLayout>
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -213,104 +198,95 @@ differently on different device screen size-->
                     android:shadowDy="2"
                     android:shadowRadius="4"
                     />
-
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/team"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:lottie_rawRes="@raw/team"
-                    android:layout_below="@id/soft"
-                    android:layout_marginTop="20dp"
-                    app:lottie_autoPlay="true"
-                    app:lottie_loop="true"
-                    android:layout_marginStart="20dp"
-                    />
-
-                <TextView
-                    android:id="@+id/team_txt"
-                    android:layout_width="wrap_content"
+                <GridLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/team"
+                    android:layout_margin="10dp"
+                    android:columnCount="3"
                     android:layout_below="@id/soft"
-                    android:layout_marginTop="45dp"
-                    android:layout_marginStart="10dp"
-                    android:text="Team Work"
-                    />
+                    >
 
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/problem"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:lottie_rawRes="@raw/problemsolving"
-                    android:layout_below="@id/soft"
-                    android:layout_toEndOf="@id/team_txt"
-                    android:layout_marginTop="20dp"
-                    app:lottie_autoPlay="true"
-                    app:lottie_loop="true"
-                    android:layout_marginStart="20dp"
-                    />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        app:lottie_rawRes="@raw/problemsolving"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        android:layout_margin="15dp"
+                        />
 
-                <TextView
-                    android:id="@+id/problem_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/soft"
-                    android:layout_marginTop="40dp"
-                    android:layout_toEndOf="@id/problem"
-                    android:layout_marginStart="10dp"
-                    android:text="Problem\nSolving"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Problem \nSolving"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        app:lottie_rawRes="@raw/critical"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        android:layout_margin="15dp"
+                        />
 
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/Timemanage"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:lottie_rawRes="@raw/timemanage"
-                    android:layout_below="@id/team"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    app:lottie_autoPlay="true"
-                    app:lottie_loop="true"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_gravity="center"
+                        android:text="Critical\nThinking" />
 
-                <TextView
-                    android:id="@+id/Timemanage_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/Timemanage"
-                    android:layout_below="@id/team_txt"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginStart="10dp"
-                    android:text="Time\nManagement"
-                    />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_column="2"
+                        android:layout_row="0"
+                        app:lottie_rawRes="@raw/team"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        android:layout_margin="15dp"
+                        />
 
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/Critical"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    app:lottie_rawRes="@raw/critical"
-                    android:layout_toEndOf="@id/Timemanage_txt"
-                    android:layout_below="@id/problem"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="10dp"
-                    app:lottie_autoPlay="true"
-                    app:lottie_loop="true"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="2"
+                        android:layout_gravity="center"
+                        android:text="Team\n Work" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Critical\nThinking"
-                    android:layout_toEndOf="@id/Critical"
-                    android:layout_below="@id/problem_txt"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginStart="10dp"
-                    />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:lottie_rawRes="@raw/timemanage"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_margin="15dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\t\t\tTime\nManagement"
+                        android:layout_row="3"
+                        android:layout_column="1"
+                        android:layout_gravity="center"
+                        />
+                </GridLayout>
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@id/Toolstech"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -326,7 +302,7 @@ differently on different device screen size-->
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:padding="15dp">
 
                 <TextView
@@ -343,115 +319,106 @@ differently on different device screen size-->
                     android:shadowRadius="4"
                     />
 
-                <ImageView
-                    android:id="@+id/git"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/git"
-                    android:layout_below="@id/Toolstech"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <GridLayout
+                    android:id="@+id/Toolsgrid"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/git_txt"
-                    android:text="Git"
-                    android:layout_toEndOf="@id/git"
+                    android:columnCount="3"
                     android:layout_below="@id/Toolstech"
-                    android:layout_marginTop="35dp"
-                    android:layout_marginStart="10dp"
-                    />
+                    android:layout_margin="10dp">
 
-                <ImageView
-                    android:id="@+id/github"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_toEndOf="@id/git_txt"
-                    android:layout_marginStart="20dp"
-                    android:layout_below="@id/Toolstech"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/github"
-                    />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/git"
+                        android:layout_margin="20dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/gtihub_txt"
-                    android:layout_toEndOf="@id/github"
-                    android:layout_below="@id/Toolstech"
-                    android:layout_marginTop="35dp"
-                    android:layout_marginStart="10dp"
-                    android:text="GitHub"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Git"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/github"
+                        android:layout_margin="20dp"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:id="@+id/VS"
-                    android:src="@drawable/vs"
-                    android:layout_below="@id/Toolstech"
-                    android:layout_toEndOf="@id/gtihub_txt"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GitHub"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_gravity="center"
+                        />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/vs_txt"
-                    android:text="VS"
-                    android:layout_toEndOf="@id/VS"
-                    android:layout_below="@id/Toolstech"
-                    android:layout_marginTop="35dp"
-                    android:layout_marginStart="10dp"
-                    />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/vs"
+                        android:layout_margin="20dp"
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        />
 
-                <ImageView
-                    android:id="@+id/androidstudio"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/android_studio"
-                    android:layout_below="@id/git"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="20dp"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Visual Studio"
+                        android:layout_row="1"
+                        android:layout_column="2"
+                        android:layout_gravity="center"
+                        />
 
-                <TextView
-                    android:id="@+id/androidstudio_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Android\nStudio"
-                    android:layout_below="@id/git_txt"
-                    android:layout_toEndOf="@id/androidstudio"
-                    android:layout_marginTop="39dp"
-                    android:layout_marginStart="10dp"
-                    />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/firebase"
+                        android:layout_margin="20dp"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        />
 
-             <ImageView
-                 android:id="@+id/firebase"
-                 android:layout_width="50dp"
-                 android:layout_height="50dp"
-                 android:src="@drawable/firebase"
-                 android:layout_below="@id/github"
-                 android:layout_toEndOf="@id/androidstudio_txt"
-                 android:layout_marginTop="20dp"
-                 android:layout_marginStart="20dp"
-                 />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Firebase\n\tStudio"
+                        android:layout_row="3"
+                        android:layout_column="1"
+                        android:layout_gravity="center"
+                        />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Google\nFirebase"
-                    android:layout_toEndOf="@id/firebase"
-                    android:layout_below="@id/gtihub_txt"
-                    android:layout_marginTop="39dp"
-                    android:layout_marginStart="10dp"
-                    />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/android_studio"
+                        android:layout_margin="20dp"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android\n\tStudio"
+                        android:layout_row="3"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        />
+                </GridLayout>
 
             </RelativeLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/slider"
@@ -483,3 +450,4 @@ differently on different device screen size-->
 
     </RelativeLayout>
 </ScrollView>
+    
