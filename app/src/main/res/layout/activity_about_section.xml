@@ -37,6 +37,7 @@
             android:layout_marginTop="30dp"
             android:elevation="8dp"
             android:translationZ="4dp"
+            android:visibility="invisible"
             />
 
         <ImageView
@@ -47,6 +48,7 @@
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/About_photo"
+            android:visibility="invisible"
             />
 
         <com.airbnb.lottie.LottieAnimationView
@@ -71,6 +73,7 @@
             android:clickable="true"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
+            android:visibility="invisible"
             >
 
             <RelativeLayout
@@ -85,6 +88,7 @@
                     android:padding="16dp">
 
                     <TextView
+                        android:id="@+id/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawablePadding="10dp"
@@ -133,7 +137,9 @@
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/about_Card"
-            android:src="@drawable/goal"/>
+            android:src="@drawable/goal"
+            android:visibility="invisible"
+            />
 
 
         <com.google.android.material.card.MaterialCardView
@@ -146,7 +152,9 @@
             android:layout_below="@id/goals"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="invisible"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -155,6 +163,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/go"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawablePadding="10dp"
@@ -200,6 +209,7 @@
             android:layout_below="@id/goalscard"
             android:layout_centerHorizontal="true"
             android:src="@drawable/developer"
+            android:visibility="invisible"
             />
 
         <com.google.android.material.card.MaterialCardView
@@ -212,7 +222,9 @@
             android:layout_below="@id/dev"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="invisible"
+            >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -221,6 +233,7 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/devel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="10dp"
