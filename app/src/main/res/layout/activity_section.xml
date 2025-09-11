@@ -272,6 +272,10 @@
                 app:lottie_loop="true"
                 app:lottie_rawRes="@raw/slider" />
 
+// can add cardview of certifications.....
+
+
+            
             <!-- Loading Animation -->
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/loadingAnimation"
