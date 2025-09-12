@@ -260,7 +260,7 @@
                     app:lottie_loop="true"
                     app:lottie_rawRes="@raw/contact"/>
 
-                <!-- Slider Animation -->
+<!--                 Slider Animation-->
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/sliderAnimation"
                     android:layout_width="33dp"

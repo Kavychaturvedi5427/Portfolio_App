@@ -176,7 +176,7 @@ public class Contact_activity extends AppCompatActivity {
             }
         });
 
-        // Implementing messaging fuctionality using firebase and firebase database....
+        // Implementing messaging functionality using firebase and firebase database....
 
         FirebaseFirestore db=FirebaseFirestore.getInstance();
         ImageView send_btn= findViewById(R.id.sendBtn);
