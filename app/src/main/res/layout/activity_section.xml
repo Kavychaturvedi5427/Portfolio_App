@@ -1,294 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:fillViewport="true"
     tools:context=".Section_activity">
 
-    <com.google.android.material.card.MaterialCardView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
-        android:id="@+id/mainCard"
-        android:layout_width="395dp"
-        android:layout_height="720dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="6dp"
-        >
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mainCard"
+            android:layout_width="395dp"
+            android:layout_height="720dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="9dp"
-            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="9dp">
 
-            <!-- About Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/about_card"
-                android:layout_width="155dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                <!-- About Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/about_card"
+                    android:layout_width="155dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="8dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
 
-                    <TextView
-                        android:id="@+id/about_Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="35dp"
-                        android:gravity="center"
-                        android:fontFamily="@font/bebas_neue_regular"
-                        android:shadowColor="@color/black"
-                        android:shadowDx="2"
-                        android:shadowDy="2"
-                        android:shadowRadius="4"
-                        android:text="About"
-                        android:textSize="26sp" />
+                        <TextView
+                            android:id="@+id/about_Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:text="About"
+                            android:textSize="26sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/about_Text"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:text="@string/learn_more_about_me"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/about_Text"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/learn_more_about_me"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
-                </RelativeLayout>
-            </com.google.android.material.card.MaterialCardView>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-            <!-- About Animation -->
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/aboutUsAnimation"
-                android:layout_width="147dp"
-                android:layout_height="133dp"
-                android:layout_alignTop="@id/about_card"
-                android:layout_marginStart="15dp"
-                android:layout_toEndOf="@id/about_card"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/about_us" />
+                <!-- About Animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/aboutUsAnimation"
+                    android:layout_width="147dp"
+                    android:layout_height="133dp"
+                    android:layout_alignTop="@id/about_card"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/about_card"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/about_us" />
 
-            <!-- Project Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/project_card"
-                android:layout_width="155dp"
-                android:layout_height="150dp"
-                android:layout_below="@id/about_card"
-                android:layout_marginStart="13dp"
-                android:layout_toEndOf="@id/about_card"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                <!-- Project Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/project_card"
+                    android:layout_width="155dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/about_card"
+                    android:layout_marginStart="13dp"
+                    android:layout_toEndOf="@id/about_card"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="8dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
 
-                    <TextView
-                        android:id="@+id/project_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="35dp"
-                        android:gravity="center"
-                        android:fontFamily="@font/bebas_neue_regular"
-                        android:shadowColor="@color/black"
-                        android:shadowDx="2"
-                        android:shadowDy="2"
-                        android:shadowRadius="4"
-                        android:text="@string/projects"
-                        android:textSize="26sp" />
+                        <TextView
+                            android:id="@+id/project_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:text="@string/projects"
+                            android:textSize="26sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/project_txt"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:text="@string/projects_txt"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/project_txt"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/projects_txt"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-            <!-- Project Animation -->
+                <!-- Project Animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/projectAnimation"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_below="@id/about_card"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_toStartOf="@id/project_card"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/project" />
 
-            <!-- Skills Card -->
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/projectAnimation"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_below="@id/about_card"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="22dp"
-                android:layout_toStartOf="@id/project_card"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/project" />
+                <!-- Skills Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/skills_card"
+                    android:layout_width="155dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/project_card"
+                    android:layout_marginStart="25dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="8dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/skills_card"
-                android:layout_width="155dp"
-                android:layout_height="150dp"
-                android:layout_below="@id/project_card"
-                android:layout_marginStart="25dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="8dp">
+                        <TextView
+                            android:id="@+id/skills_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:gravity="center"
+                            android:text="@string/skills"
+                            android:textSize="26sp"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4" />
 
-                    <TextView
-                        android:id="@+id/skills_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="35dp"
-                        android:gravity="center"
-                        android:text="@string/skills"
-                        android:textSize="26sp"
-                        android:fontFamily="@font/bebas_neue_regular"
-                        android:shadowColor="@color/black"
-                        android:shadowDx="2"
-                        android:shadowDy="2"
-                        android:shadowRadius="4" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/skills_txt"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/things_i_m_good_at"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/skills_txt"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:text="@string/things_i_m_good_at"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-            </com.google.android.material.card.MaterialCardView>
+                <!-- Skills Animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/skillanim"
+                    android:layout_width="146dp"
+                    android:layout_height="124dp"
+                    android:layout_above="@id/contact_card"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_toEndOf="@id/skills_card"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/skills" />
 
-            <!-- Contact Card -->
+                <!-- Contact Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/contact_card"
+                    android:layout_width="155dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/skills_card"
+                    android:layout_marginStart="13dp"
+                    android:layout_toEndOf="@id/skills_card"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="8dp">
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/skillanim"
-                android:layout_width="146dp"
-                android:layout_height="124dp"
-                android:layout_above="@id/contact_card"
-                android:layout_marginStart="17dp"
-                android:layout_marginEnd="22dp"
-                android:layout_marginBottom="16dp"
-                android:layout_toEndOf="@id/skills_card"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/skills" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/contact_card"
-                android:layout_width="155dp"
-                android:layout_height="150dp"
-                android:layout_below="@id/skills_card"
-                android:layout_marginStart="13dp"
-                android:layout_toEndOf="@id/skills_card"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                        <TextView
+                            android:id="@+id/contact_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="35dp"
+                            android:gravity="center"
+                            android:text="@string/contacts"
+                            android:textSize="26sp"
+                            android:fontFamily="@font/bebas_neue_regular"
+                            android:shadowColor="@color/black"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/contact_txt"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/reach_out_to_me"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    <TextView
-                        android:id="@+id/contact_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="35dp"
-                        android:gravity="center"
-                        android:text="@string/contacts"
-                        android:textSize="26sp"
-                        android:fontFamily="@font/bebas_neue_regular"
-                        android:shadowColor="@color/black"
-                        android:shadowDx="2"
-                        android:shadowDy="2"
-                        android:shadowRadius="4" />
+                <!-- Contact Animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/contactAnimation"
+                    android:layout_width="141dp"
+                    android:layout_height="124dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="95dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/contact"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/contact_txt"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:text="@string/reach_out_to_me"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-            </com.google.android.material.card.MaterialCardView>
+                <!-- Slider Animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/sliderAnimation"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="38dp"
+                    android:rotation="90"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/slider" />
 
-            <!-- Contact Animation -->
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/contactAnimation"
-                android:layout_width="141dp"
-                android:layout_height="124dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="27dp"
-                android:layout_marginBottom="95dp"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/contact"/>
+                <!-- Loading Animation -->
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/loadingAnimation"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="38dp"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/loading" />
 
-            <!-- Slider Animation -->
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/sliderAnimation"
-                android:layout_width="33dp"
-                android:layout_height="33dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="38dp"
-                android:rotation="90"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/slider" />
-
-// can add cardview of certifications.....
-
-
-            
-            <!-- Loading Animation -->
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/loadingAnimation"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="38dp"
-                android:visibility="gone"
-                app:lottie_autoPlay="false"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/loading" />
-
-        </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
-</RelativeLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</ScrollView>
