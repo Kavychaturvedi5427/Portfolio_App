@@ -38,3 +38,13 @@ Designed for developers and professionals to present their work in a **simple, e
 1. Clone the repository:
    ```bash
    git clone https://github.com/Kavychaturvedi5427/portfolio-app.git
+
+2. Open the Project
+
+3. Open the cloned folder.
+
+4. Double-click on OpenApp.bat.
+      Choose the IDE
+      When prompted, select the IDE where you want to open the project:
+         Press 1 → Android Studio
+         Press 2 → VS Code
