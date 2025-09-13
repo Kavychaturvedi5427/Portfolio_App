@@ -48,4 +48,4 @@ Designed for developers and professionals to present their work in a **simple, e
       - When prompted, select the IDE where you want to open the project:
          - Press 1 → Android Studio
          - Press 2 → VS Code
--*(Make sure you have android sdk installed in your system which is required for Android projects)*
+         - *(Make sure you have android sdk installed in your system which is required for Android projects)*
