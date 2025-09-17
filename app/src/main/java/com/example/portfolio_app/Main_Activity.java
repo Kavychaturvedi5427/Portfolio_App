@@ -58,18 +58,13 @@ public class Main_Activity extends AppCompatActivity {
             }
         });
 
-
-
         ImageView avtar_img=findViewById(R.id.avtar);
         Animation bounce_anim= AnimationUtils.loadAnimation(this,R.anim.bounce_anim);
         avtar_img.setAnimation(bounce_anim);
 
-
-
         TextView welcome_txt=findViewById(R.id.welcome);
         Animation fade_in_anim= AnimationUtils.loadAnimation(this,R.anim.fade_in_anim);
         welcome_txt.setAnimation(fade_in_anim);
-
 
         getSupportActionBar().setTitle("K's Portfolio");
 

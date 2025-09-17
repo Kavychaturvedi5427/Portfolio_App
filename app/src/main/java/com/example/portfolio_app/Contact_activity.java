@@ -42,7 +42,6 @@ public class Contact_activity extends AppCompatActivity {
         ImageView github=findViewById(R.id.git);
         ImageView tweet=findViewById(R.id.x);
 
-
         LottieAnimationView slider=findViewById(R.id.slider);
         LottieAnimationView loading=findViewById(R.id.loadingAnimation);
 

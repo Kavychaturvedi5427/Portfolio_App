@@ -102,7 +102,6 @@ public class Section_activity extends AppCompatActivity {
             }
         });
 
-
         getSupportActionBar().setTitle("Content");
     }
 }

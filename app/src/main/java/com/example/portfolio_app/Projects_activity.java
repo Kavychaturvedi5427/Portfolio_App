@@ -71,10 +71,9 @@ public class Projects_activity extends AppCompatActivity {
                        startActivity(intent);
                    }
                },500);
-
            }
        });
-
+       
         // Set action bar title
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Projects");
