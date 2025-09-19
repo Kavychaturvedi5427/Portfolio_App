@@ -1,11 +1,12 @@
 # 📱 Portfolio App  
 
-![License](https://img.shields.io/badge/License-MIT-green.svg) 
-![Stars](https://img.shields.io/github/stars/Kavychaturvedi5427/Portfolio_App?style=social) 
-![Forks](https://img.shields.io/github/forks/Kavychaturvedi5427/Portfolio_App?style=social) 
-![Issues](https://img.shields.io/github/issues/Kavychaturvedi5427/Portfolio_App) 
+![License](https://img.shields.io/badge/License-MIT-green.svg)  
+![Stars](https://img.shields.io/github/stars/Kavychaturvedi5427/Portfolio_App?style=social)  
+![Forks](https://img.shields.io/github/forks/Kavychaturvedi5427/Portfolio_App?style=social)  
+![Issues](https://img.shields.io/github/issues/Kavychaturvedi5427/Portfolio_App)  
 ![Pull Requests](https://img.shields.io/github/issues-pr/Kavychaturvedi5427/Portfolio_App)  
 
+---
 
 An Android portfolio app showcasing **projects, skills, and personal information**.  
 Designed for developers and professionals to present their work in a **simple, elegant, and interactive way**.  
@@ -44,4 +45,5 @@ Designed for developers and professionals to present their work in a **simple, e
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/Kavychaturvedi5427/portfolio-app.git
+   git clone https://github.com/Kavychaturvedi5427/Portfolio_App.git
+   cd Portfolio_App
