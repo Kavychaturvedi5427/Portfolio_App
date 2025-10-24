@@ -64,8 +64,8 @@ public class AboutSection_activity extends AppCompatActivity {
         // About card (after 4s)
         handler.postDelayed(() -> {
             AboutCard.setVisibility(View.VISIBLE);
-            AboutCard.startAnimation(AnimationUtils.loadAnimation(this, R.anim.bounce_anim));
-        }, 4000);
+            AboutCard.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_anim));
+        }, 3000);
 
         // Goals image (after 0.5s as in your code)
         handler.postDelayed(() -> {
@@ -76,8 +76,8 @@ public class AboutSection_activity extends AppCompatActivity {
         // Goals card (after 8s)
         handler.postDelayed(() -> {
             goals.setVisibility(View.VISIBLE);
-            goals.startAnimation(AnimationUtils.loadAnimation(this, R.anim.bounce_anim));
-        }, 8000);
+            goals.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_anim));
+        }, 4500);
 
         // Developer image (after 0.5s as in your code)
         handler.postDelayed(() -> {
@@ -88,8 +88,8 @@ public class AboutSection_activity extends AppCompatActivity {
         // Developer card (after 12s)
         handler.postDelayed(() -> {
             dev.setVisibility(View.VISIBLE);
-            dev.startAnimation(AnimationUtils.loadAnimation(this, R.anim.bounce_anim));
-        }, 12000);
+            dev.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_anim));
+        }, 6000);
 
         // Back button with loading animation
         back_slider.setOnClickListener(v -> {
@@ -100,9 +100,9 @@ public class AboutSection_activity extends AppCompatActivity {
             v.postDelayed(() -> startActivity(backT0Section), 500);
         });
 
-        // ActionBar title
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("About");
-        }
+//        // ActionBar title
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setTitle("About");
+//        }
     }
 }

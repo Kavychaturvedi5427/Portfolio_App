@@ -5,15 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-
-
 import com.airbnb.lottie.LottieAnimationView;
 
 public class Main_Activity extends AppCompatActivity {
@@ -66,7 +62,7 @@ public class Main_Activity extends AppCompatActivity {
         Animation fade_in_anim= AnimationUtils.loadAnimation(this,R.anim.fade_in_anim);
         welcome_txt.setAnimation(fade_in_anim);
 
-        getSupportActionBar().setTitle("K's Portfolio");
+//        getSupportActionBar().setTitle("K's Portfolio");
 
     }
 }

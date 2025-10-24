@@ -75,8 +75,8 @@ public class Projects_activity extends AppCompatActivity {
        });
        
         // Set action bar title
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Projects");
-        }
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setTitle("Projects");
+//        }
     }
 }

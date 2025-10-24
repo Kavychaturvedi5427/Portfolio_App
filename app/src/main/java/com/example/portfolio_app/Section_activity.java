@@ -18,7 +18,6 @@ import com.airbnb.lottie.Lottie;
 import com.airbnb.lottie.LottieAnimationView;
 
 public class Section_activity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +33,11 @@ public class Section_activity extends AppCompatActivity {
         LottieAnimationView back_slider=findViewById(R.id.sliderAnimation);
         LottieAnimationView loading_anim=findViewById(R.id.loadingAnimation);
 
-        CardView about=findViewById(R.id.about_card);
+        CardView about=findViewById(R.id.about_Card);
         CardView skills=findViewById(R.id.skills_card);
         CardView projects=findViewById(R.id.project_card);
-        CardView contact=findViewById(R.id.contact_card);
+        CardView contact=findViewById(R.id.Contact_Card);
+        CardView certification=findViewById(R.id.Certification_card);
 
         // OnClick activity for back button ....
         back_slider.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +75,16 @@ public class Section_activity extends AppCompatActivity {
             }
         });
 
+        certification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Section_activity.this, certification.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         // OnClick activity for contact page....
         contact.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +112,6 @@ public class Section_activity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setTitle("Content");
+//        getSupportActionBar().setTitle("Content");
     }
 }

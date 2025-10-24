@@ -38,7 +38,7 @@
     <string name="things_i_m_good_at">Things I’m good at</string>
     <string name="skills">Skills</string>
     <string name="projects">Projects</string>
-    <string name="learn_more_about_me">Learn more about me</string>
+    <string name="learn_more_about_me">Learn about me</string>
     <string name="Proj1">F.R.U.I.T.S – Face Recognition Unified \tInterface Technology</string>
     <string name="proj1_desc">FRUITS, a group based project which allows secure login or sign-up using your face, just like ‘Sign in with Google’. Captures basic info and authenticates users seamlessly across websites.</string>
     <string name="Proj2">Tomato Leaf AI </string>

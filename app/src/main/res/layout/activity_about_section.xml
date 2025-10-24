@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutSection_activity"
+    android:fillViewport="true"
     android:fitsSystemWindows="true"
+
     >
 
     <RelativeLayout
@@ -26,8 +28,8 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/About_photo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="210dp"
+            android:layout_height="210dp"
             android:scaleType="centerCrop"
             android:src="@drawable/self"
             app:shapeAppearance="@style/CircleImageView"

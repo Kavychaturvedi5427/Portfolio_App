@@ -182,7 +182,8 @@ public class Contact_activity extends AppCompatActivity {
         TextView messagebox = findViewById(R.id.messageBox);
         send_btn.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 String Entered_msg = messagebox.getText().toString().trim();
                 if(!Entered_msg.isEmpty()){
                     Map<String , Object> msg=new HashMap<>();
@@ -198,6 +199,6 @@ public class Contact_activity extends AppCompatActivity {
                 }
             }
         });
-        getSupportActionBar().setTitle("Contact Info");
+//        getSupportActionBar().setTitle("Contact Info");
     }
 }

@@ -38,6 +38,10 @@
         <activity
             android:name=".Section_activity"
             android:exported="true" />
+
+        <activity android:name=".certification"
+            android:exported="true"
+            />
     </application>
 
 

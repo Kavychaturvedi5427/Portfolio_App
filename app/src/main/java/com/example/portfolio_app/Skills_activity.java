@@ -52,6 +52,6 @@ public class Skills_activity extends AppCompatActivity {
             });
         });
 
-        getSupportActionBar().setTitle("Skills");
+//        getSupportActionBar().setTitle("Skills");
     }
 }
