@@ -1,30 +1,61 @@
-# Gradle files
-.gradle/
-build/
+# --------------------------------------------------------------------------
+# PROJECT FILES TO IGNORE (GENERATED, BUILD ARTIFACTS, AND LOCAL CONFIG)
+# --------------------------------------------------------------------------
 
-# Local configuration
+# Built application files
+*.apk
+*.aab
+*.aar
+*.ap_
+
+# Files for the ART/Dalvik VM
+*.dex
+*.class
+
+# Generated build directories and files
+/build/
+/app/build/
+/out/
+/captures/
+
+# Gradle files, logs, and wrapper
+# NOTE: gradle-wrapper.jar, gradlew, gradlew.bat, gradle.properties,
+# and settings.gradle.kts are generally committed.
+.gradle/
+*.log
+
+# Local configuration file (sdk path, signing info, etc.)
 local.properties
 
-# IDE files
+# Android Studio / IntelliJ IDEA files
+# These are local workspace and cache files that shouldn't be shared.
+.idea/
 *.iml
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+*.iws
+*.ipr
+# Exceptions for .idea files that are sometimes useful to share:
+#!.idea/runConfigurations
+#!.idea/codeStyles/
 
-# App specific build outputs
-app/release/
-app/debug/
-captures/
-
-# External native build
+# External native build (NDK)
 .externalNativeBuild/
 .cxx/
 
-# macOS files
-.DS_Store
+# Operating System files
+.DS_Store # macOS files
+Thumbs.db # Windows thumbnail cache
+
+# App specific build outputs (usually in /build, but good for explicit clarity)
+app/release/
+app/debug/
+
+# Your specific images that are redundant or large and can be regenerated
+# NOTE: If these are the *source* files for your avatar logo,
+# and they are part of the app's source code, you might want to keep one.
+# However, if they are copies or temp files, it's safe to ignore them.
 app/src/main/res/drawable/self_main.jpg
 app/src/main/res/drawable/self_main.png
-app/src/main/res/drawable/self_main.png
+
+# --------------------------------------------------------------------------
+# END OF .GITIGNORE
+# --------------------------------------------------------------------------
