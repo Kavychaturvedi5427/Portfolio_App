@@ -11,8 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Portfolio_App"
-        android:hardwareAccelerated="true">
+        android:theme="@style/Theme.Portfolio_App">
 
         <activity
             android:name=".Contact_activity"
@@ -40,7 +39,7 @@
             android:name=".Section_activity"
             android:exported="true" />
 
-        <activity android:name=".Certification_activity"
+        <activity android:name=".certification"
             android:exported="true"
             />
     </application>

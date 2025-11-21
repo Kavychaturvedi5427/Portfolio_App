@@ -35,8 +35,8 @@ android {
 
 dependencies {
     // Existing dependencies
-    implementation("com.airbnb.android:lottie:6.6.10")
-    implementation("com.google.android.material:material:1.13.0")
+    implementation("com.airbnb.android:lottie:6.6.7")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -45,7 +45,7 @@ dependencies {
     implementation(libs.filament.android)
 
     // Firebase BoM (manages versions)
-    implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
 
     // Example Firebase services (add what you need)
     implementation("com.google.firebase:firebase-analytics")
