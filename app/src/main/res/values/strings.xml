@@ -54,6 +54,7 @@
     <string name="type_your_message_here">Type your message here...</string>
     <string name="copyright">© 2025 Kavya Chaturvedi. All rights reserved.</string>
     <string name="about_meCard">I am a 3rd-year B.Tech Computer Science student currently learning Android app development and Cybersecurity. My interests include network security, ethical hacking, and penetration testing, along with strengthening my foundation in Java (DSA).</string>
+    <string name="proj4">The Ledger</string>
 
 
 </resources>
