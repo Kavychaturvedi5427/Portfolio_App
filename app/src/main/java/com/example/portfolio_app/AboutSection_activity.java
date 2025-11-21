@@ -1,11 +1,13 @@
 package com.example.portfolio_app;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,6 +48,9 @@ public class AboutSection_activity extends AppCompatActivity {
         ImageView aboutme = findViewById(R.id.aboutme);
         ImageView goal = findViewById(R.id.goals);
         ImageView Deve = findViewById(R.id.dev);
+        LinearLayout resume = findViewById(R.id.res_lay);
+
+
 
         Handler handler = new Handler();
 
@@ -90,6 +95,16 @@ public class AboutSection_activity extends AppCompatActivity {
             dev.setVisibility(View.VISIBLE);
             dev.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_anim));
         }, 6000);
+
+        resume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://portfolio-app-64e6e.web.app/resume.pdf";
+                Intent to_Res = new Intent(Intent.ACTION_VIEW);
+                to_Res.setData(Uri.parse(url));
+                startActivity(to_Res);
+            }
+        });
 
         // Back button with loading animation
         back_slider.setOnClickListener(v -> {
