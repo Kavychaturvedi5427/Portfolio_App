@@ -1,13 +1,11 @@
 package com.example.portfolio_app;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,7 +40,6 @@ public class AboutSection_activity extends AppCompatActivity {
         CardView AboutCard = findViewById(R.id.about_Card);
         CardView goals = findViewById(R.id.goalscard);
         CardView dev = findViewById(R.id.Dev_Card);
-        LinearLayout resume = findViewById(R.id.res_lay);
 
         // Images
         ImageView selfImg = findViewById(R.id.About_photo);
@@ -56,55 +53,43 @@ public class AboutSection_activity extends AppCompatActivity {
         handler.postDelayed(() -> {
             selfImg.setVisibility(View.VISIBLE);
             selfImg.startAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_anim));
-        }, 250);
+        }, 500);
 
         // About me image (also after 0.5s as in your code)
         handler.postDelayed(() -> {
             aboutme.setVisibility(View.VISIBLE);
             aboutme.startAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_anim));
-        }, 250);
+        }, 500);
 
         // About card (after 4s)
         handler.postDelayed(() -> {
             AboutCard.setVisibility(View.VISIBLE);
             AboutCard.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_anim));
-        }, 2500);
+        }, 3000);
 
         // Goals image (after 0.5s as in your code)
         handler.postDelayed(() -> {
             goal.setVisibility(View.VISIBLE);
             goal.startAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_anim));
-        }, 250);
+        }, 500);
 
         // Goals card (after 8s)
         handler.postDelayed(() -> {
             goals.setVisibility(View.VISIBLE);
             goals.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_anim));
-        }, 4000);
+        }, 4500);
 
         // Developer image (after 0.5s as in your code)
         handler.postDelayed(() -> {
             Deve.setVisibility(View.VISIBLE);
             Deve.startAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_anim));
-        }, 250);
+        }, 500);
 
         // Developer card (after 12s)
         handler.postDelayed(() -> {
             dev.setVisibility(View.VISIBLE);
             dev.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_anim));
-        }, 5000);
-
-        resume.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = "https://portfolio-app-64e6e.web.app/resume.pdf";
-                Intent to_Res = new Intent(Intent.ACTION_VIEW);
-                to_Res.setData(Uri.parse(url));
-                startActivity(to_Res);
-            }
-        });
-
-
+        }, 6000);
 
         // Back button with loading animation
         back_slider.setOnClickListener(v -> {

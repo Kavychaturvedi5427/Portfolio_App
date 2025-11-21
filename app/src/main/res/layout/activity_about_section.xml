@@ -246,45 +246,17 @@
         </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
-            android:id="@+id/res_lay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Dev_Card"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            >
-
-            <ImageView
-                android:layout_width="65dp"
-                android:layout_height="40dp"
-                android:src="@drawable/resume"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bebas_neue_regular"
-                android:text="Tap to check out my résumé"
-                android:textSize="20sp"
-                />
-        </LinearLayout>
-
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/sliderAnimation"
             android:layout_width="45dp"
             android:layout_height="45dp"
             app:lottie_rawRes="@raw/slider"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/res_lay"
+            android:layout_below="@id/Dev_Card"
             android:rotation="90"
             android:layout_marginBottom="10dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            android:layout_marginTop="6dp"
             />
 
         <com.airbnb.lottie.LottieAnimationView
@@ -293,7 +265,7 @@
             android:layout_height="45dp"
             app:lottie_rawRes="@raw/loading"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/res_lay"
+            android:layout_below="@id/Dev_Card"
             android:rotation="90"
             android:visibility="gone"
             app:lottie_autoPlay="false"
