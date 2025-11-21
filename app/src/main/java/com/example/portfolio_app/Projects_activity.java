@@ -39,6 +39,8 @@ public class Projects_activity extends AppCompatActivity {
         ImageView Project1 = findViewById(R.id.gitLink1);
         ImageView Project2 = findViewById(R.id.gitLink2);
         ImageView Project3 = findViewById(R.id.gitLink3);
+        ImageView Project4 = findViewById(R.id.gitLink4);
+
 
         LottieAnimationView sliderAnimation = findViewById(R.id.sliderAnimation);
         LottieAnimationView loadingAnimation =findViewById(R.id.loading);
@@ -58,6 +60,13 @@ public class Projects_activity extends AppCompatActivity {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(gitURL)));
         });
 
+        Project4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String gitUrl = "https://github.com/Kavychaturvedi5427/The-Ledger.git";
+                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(gitUrl)));
+            }
+        });
        sliderAnimation.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {

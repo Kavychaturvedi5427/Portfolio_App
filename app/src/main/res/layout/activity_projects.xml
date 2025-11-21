@@ -227,6 +227,74 @@
                         android:src="@drawable/github" />
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/project3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="9dp">
+
+                <RelativeLayout
+                    android:id="@+id/Proj4RL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/ledger"
+                        android:layout_width="69dp"
+                        android:layout_height="62dp"
+                        android:layout_margin="3dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/ledger" />
+
+                    <TextView
+                        android:id="@+id/proj4_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_toEndOf="@id/ledger"
+                        android:fontFamily="@font/bebas_neue_regular"
+                        android:text="@string/proj4"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/proj4desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger"
+                        android:layout_margin="10dp"
+                        android:text="Android expense-tracking app built with Firebase Auth, Firestore, and Remote Config — designed for a simple, secure, and modern user experience.
+
+" />
+
+                    <TextView
+                        android:id="@+id/Link4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/proj4_title"
+                        android:layout_margin="3dp"
+                        android:layout_toEndOf="@id/ledger"
+                        android:text="@string/visit_on_github" />
+
+                    <ImageView
+                        android:id="@+id/gitLink4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/proj4_title"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@id/Link4"
+                        android:contentDescription="@string/tomatoleaf_git"
+                        android:src="@drawable/github" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- More projects will be added in future -->
         </RelativeLayout>
